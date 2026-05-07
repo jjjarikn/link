@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Links</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="tap-catcher" id="tapCatcher">
+    <div class="overlay-content">
+      <div class="overlay-text">Нажми на ⋯ в правом верхнем углу и выбери <b>Open in browser</b>.</div>
+      <div class="overlay-arrow">↗</div>
+    </div>
+  </div>
+
+  <main class="card" id="card">
+    <div class="top-row">
+      <div class="badge">ОГЭ химия</div>
+      <div class="mini-arrow">↗</div>
+    </div>
+
+    <img class="avatar" src="photo.jpg" alt="Фото">
+    <h1>Денис Марков</h1>
+    <p>Все полезные файлы для подготовки в закрепленном сообщении</p>
+
+    <div class="buttons">
+      <a class="btn tg" href="https://t.me/username" target="_blank" rel="noopener noreferrer">
+        <img class="btn-icon" src="tg.png" alt="Telegram">
+        <span>Забрать файлы в TG</span>
+      </a>
+
+      <a class="btn vk" href="https://vk.com/username" target="_blank" rel="noopener noreferrer">
+        <img class="btn-icon" src="vk.png" alt="VK">
+        <span>Забрать файлы в VK</span>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      const overlay = document.getElementById('tapCatcher');
+      const card = document.getElementById('card');
+      let shown = false;
+      function showOverlay() {
+        if (shown) return;
+        shown = true;
+        card.classList.add('moved');
+        overlay.classList.add('show');
+      }
+      document.addEventListener('pointerdown', showOverlay, { once: true, passive: true });
+      document.addEventListener('touchstart', showOverlay, { once: true, passive: true });
+    })();
+  </script>
+</body>
+</html>
+
+<!--<h1>Денис Марков | Химия ОГЭ 2026 | Умскул</h1>
+    <p>Все полезные файлы для подготовки в закрепленном сообщении</p>
+
+    <div class="notice">
+      <b>Если открылось внутри TikTok на iPhone:</b><br>
+      ⋯ → <b>Open in browser</b> / <b>Открыть в браузере</b>.
+    </div>
+
+    <div class="buttons">
+      <a class="btn tg" href="/go/tg">Забрать файлы в TG</a>
+      <a class="btn vk" href="/go/vk">Забрать файлы в VK</a>
+    </div>
+  </main>
